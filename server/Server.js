@@ -28,7 +28,7 @@ Meteor.startup(function(){
         });
     });
 
-    server.listen(100, '127.0.0.1');
+    server.listen(100, '0.0.0.0');
 
 });
 
