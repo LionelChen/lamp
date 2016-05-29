@@ -1,0 +1,46 @@
+<template name="Lamp">
+
+    <link href="//cdn.muicss.com/mui-0.5.8/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.5.8/js/mui.min.js"></script>
+    <link scr="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <div class="mui-panel">
+
+        <div class="mui-col-md-4">
+            id:{{_id}}
+        </div>
+
+        <div class="mui-col-md-1">
+            <hr style="width:2px;height:100px; ">
+        </div>
+
+        <div class="mui-col-md-4">
+            <div>
+                拥有者:{{owner}}
+            </div>
+            <div>
+                类型: {{lamptype}}
+            </div>
+
+            <div>
+                位置类型:{{locationtype}}
+            </div>
+
+            <div>
+                {{#if important }}
+                    重要
+                {{else}}
+                    非重要
+                {{/if}}
+            </div>
+
+            <div>
+                纬度:{{geo_latitude}}
+            </div>
+
+            <div>
+                经度:{{geo_longitude}}
+            </div>
+
+        </div>
+    </div>
+</template>

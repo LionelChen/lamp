@@ -1,0 +1,115 @@
+<template name="Lamps">
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        html,
+        body,
+        input,
+        textarea{
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+        }
+
+
+        /**
+         * Sidebar CSS
+         */
+        #sidebar {
+            background-color: #E57373;
+            padding: 15px;
+        }
+
+        @media (min-width: 768px) {
+            #sidebar {
+                position: fixed;
+                top: 64px;
+                bottom: 0;
+                width: 180px;
+                height: 100%;
+                padding-top: 30px;
+            }
+        }
+
+        /**
+         * Content CSS
+         */
+        @media (min-width: 768px) {
+            #content {
+                margin-left: 180px;
+            }
+        }
+
+        #new-demand-button{
+            padding-left: 20%;
+        }
+    </style>
+
+    {{#if isUserConstructor}}
+
+        {{#if CreatingNewLamp}}
+
+            {{> NewLamp}}
+
+        {{else}}
+
+            <div id="new-demand-button">
+                <button id="AddLampButton" class="mui-btn mui-btn--primary mui-btn--raised">添加路灯</button>
+            </div>
+
+        {{/if}}
+
+        {{#if Template.subscriptionsReady }}
+
+            加载完毕
+            <div id="content" class="mui-container-fluid">
+                <div class="mui-row">
+                    <div>
+                        我已经添加的路灯
+                    </div>
+                    <div class="mui-col-sm-10 mui-col-sm-offset-1">
+                        {{#each lamp}}
+                            <div class="mui-divider"></div>
+                            <br>
+                            {{> Lamp}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+
+        {{else}}
+            <p>加载中</p>
+        {{/if}}
+
+    {{/if}}
+
+    {{#if isUserManager}}
+
+        {{#if Template.subscriptionsReady }}
+
+            <div id="content" class="mui-container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-sm-10 mui-col-sm-offset-1">
+                        <div class="mui--text-dark-secondary mui--text-body2">我的路灯</div>
+                        {{#each lamp}}
+                            <div class="mui-divider"></div>
+                            <br>
+                            {{> Lamp}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+        {{else}}
+            <p>加载中</p>
+        {{/if}}
+
+
+    {{/if}}
+
+</template>

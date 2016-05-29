@@ -1,0 +1,76 @@
+<template name="Header">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- load MUI -->
+        <link href="//cdn.muicss.com/mui-0.4.2/css/mui.min.css" rel="stylesheet" type="text/css" />
+        <script src="//cdn.muicss.com/mui-0.4.2/js/mui.min.js"></script>
+    </head>
+
+
+    <style>
+
+        .mui-btn{
+            background-color: #00BCD4
+        }
+        #loginbutton{
+            background-color:transparent;
+            color:white;
+        }
+
+        #appbar-dropdown{
+            padding-right: 20px;
+        }
+
+    </style>
+
+
+    <header>
+
+        <div class="mui-appbar">
+
+            <table width="100%">
+
+                <tr style="vertical-align:middle;">
+                    <td class="mui--appbar-height">&nbsp;&nbsp;&nbsp;路灯管理系统</td>
+
+                    <!--If user is logged in, show logged in drop down-->
+                    {{#if currentUser}}
+
+                        <td class="mui--appbar-height" align="right" id="appbar-dropdown">
+
+                            <div class="mui-dropdown">
+                                <button class="mui-btn" data-mui-toggle="dropdown">
+                                    <a href="#">{{displayName}}</a>
+                                    <span class="mui-caret"></span>
+                                </button>
+                                <ul class="mui-dropdown__menu mui-dropdown__menu--right">
+                                    <li><a href="/profile">Profile</a></li>
+                                    <li><a href="#">Option 2</a></li>
+                                    <li><a href="#">Option 3</a></li>
+                                    <li><a href="/logout">Logout</a></li>
+                                </ul>
+                            </div>
+                        </td>
+
+                        <!--If user is not yet logged in, show login and register button-->
+                    {{else}}
+
+                        <td class="mui--appbar-height" align="right" id="appbar-dropdown">
+                            <div>
+                                <a href="/register" class="mui-btn mui-btn--primary">注册</a>
+                                <a href="/login" id="loginbutton" class="mui-btn mui-btn--flat">登录</a>
+                            </div>
+                        </td>
+
+                    {{/if}}
+                </tr>
+
+            </table>
+
+        </div>
+
+    </header>
+</template>

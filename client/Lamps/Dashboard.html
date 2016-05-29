@@ -1,0 +1,291 @@
+<template name="Dashboard">
+    <div class="row">
+        <div class="col-md-8">
+
+            <div class="panel pad0T">
+                <div class="panel-body"><h3 class="title-hero">Weekly Sales</h3>
+                    <div class="example-box-wrapper">
+                        <div id="data-example-1" class="mrg20B"
+                             style="width: 100%; height: 300px; padding: 0px; position: relative;">
+                            <canvas class="flot-base" width="1338" height="600"
+                                    style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 669px; height: 300px;"></canvas>
+                            <div class="flot-text"
+                                 style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+                                <div class="flot-x-axis flot-x1-axis xAxis x1Axis"
+                                     style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                    <div style="position: absolute; max-width: 83px; top: 287px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 22px; text-align: center;">
+                                        0
+                                    </div>
+                                    <div style="position: absolute; max-width: 29px; top: 287px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 113px; text-align: center;">
+                                        50
+                                    </div>
+                                    <div style="position: absolute; max-width: 32px; top: 287px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 203px; text-align: center;">
+                                        100
+                                    </div>
+                                    <div style="position: absolute; max-width: 29px; top: 287px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 296px; text-align: center;">
+                                        150
+                                    </div>
+                                    <div style="position: absolute; max-width: 83px; top: 287px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 389px; text-align: center;">
+                                        200
+                                    </div>
+                                    <div style="position: absolute; max-width: 29px; top: 287px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 482px; text-align: center;">
+                                        250
+                                    </div>
+                                    <div style="position: absolute; max-width: 32px; top: 287px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 575px; text-align: center;">
+                                        300
+                                    </div>
+                                </div>
+                                <div class="flot-y-axis flot-y1-axis yAxis y1Axis"
+                                     style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+                                    <div style="position: absolute; top: 271px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 1px; text-align: right;">
+                                        0.0
+                                    </div>
+                                    <div style="position: absolute; top: 226px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 1px; text-align: right;">
+                                        0.2
+                                    </div>
+                                    <div style="position: absolute; top: 181px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 1px; text-align: right;">
+                                        0.4
+                                    </div>
+                                    <div style="position: absolute; top: 137px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 1px; text-align: right;">
+                                        0.6
+                                    </div>
+                                    <div style="position: absolute; top: 92px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 1px; text-align: right;">
+                                        0.8
+                                    </div>
+                                    <div style="position: absolute; top: 47px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 1px; text-align: right;">
+                                        1.0
+                                    </div>
+                                    <div style="position: absolute; top: 2px; font-style: normal; font-variant-caps: normal; font-weight: 300; font-size: 10px; line-height: 12px; font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: rgba(0, 0, 0, 0.4); left: 1px; text-align: right;">
+                                        1.2
+                                    </div>
+                                </div>
+                            </div>
+                            <canvas class="flot-overlay" width="1338" height="600"
+                                    style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 669px; height: 300px;"></canvas>
+                            <div class="legend">
+                                <div style="position: absolute; width: 65px; height: 34px; top: 13px; right: 14px; background-color: rgb(255, 255, 255); opacity: 0.85;"></div>
+                                <table style="position:absolute;top:13px;right:14px;;font-size:smaller;color:#545454">
+                                    <tbody>
+                                    <tr>
+                                        <td class="legendColorBox">
+                                            <div style="border:1px solid #ccc;padding:1px">
+                                                <div style="width:4px;height:0;border:5px solid rgb(46,204,113);overflow:hidden"></div>
+                                            </div>
+                                        </td>
+                                        <td class="legendLabel">Today</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="legendColorBox">
+                                            <div style="border:1px solid #ccc;padding:1px">
+                                                <div style="width:4px;height:0;border:5px solid rgb(214,221,226);overflow:hidden"></div>
+                                            </div>
+                                        </td>
+                                        <td class="legendLabel">Yesterday</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dashboard-box dashboard-box-chart bg-white content-box">
+                <div class="content-wrapper">
+                    <div class="header">8960 <span>Total Downloads<b>in last</b> 6 years</span></div>
+                    <div class="bs-label bg-orange">~51%</div>
+                    <div class="center-div sparkline-big-alt">
+                        <canvas width="282" height="110"
+                                style="display: inline-block; width: 282px; height: 110px; vertical-align: top;"></canvas>
+                    </div>
+                    <div class="row list-grade">
+                        <div class="col-md-2">2009</div>
+                        <div class="col-md-2">2010</div>
+                        <div class="col-md-2">2011</div>
+                        <div class="col-md-2">2012</div>
+                        <div class="col-md-2">2013</div>
+                        <div class="col-md-2">2014</div>
+                    </div>
+                </div>
+                <div class="button-pane">
+                    <div class="size-md float-left"><a href="#" title="">View more details</a></div>
+                    <a href="#" class="btn btn-primary float-right tooltip-button" data-placement="top" title=""
+                       data-original-title="View details"><i class="glyph-icon icon-caret-right"></i>
+                        <div class="ripple-wrapper"></div>
+                    </a></div>
+            </div>
+            <div class="content-box animated" style="display: block;"><h3 class="content-box-header bg-default"><i
+                    class="glyph-icon icon-cog"></i> Live server status <span class="header-buttons-separator"><a
+                    href="#" class="icon-separator remove-button" data-animation="flipOutX"><i
+                    class="glyph-icon icon-times"></i></a></span></h3>
+                <div class="content-box-wrapper pad0A">
+                    <div class="mrg20A">
+                        <div class="row">
+                            <div class="col-md-7 center-margin pad0A">
+                                <canvas id="chart-area" width="378" height="378"
+                                        style="width: 189px; height: 189px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table remove-background">
+                        <tbody>
+                        <tr>
+                            <td class="text-left size-sm">
+                                <div class="badge mrg10L badge-small mrg5R bg-azure"></div>
+                                New user registrations
+                            </td>
+                            <td class="text-right"><a href="#" class="btn btn-sm hover-yellow tooltip-button"
+                                                      data-placement="top" title="" data-original-title="Flag"><i
+                                    class="glyph-icon icon-flag"></i></a> <a href="#"
+                                                                             class="btn btn-sm hover-blue-alt tooltip-button"
+                                                                             data-placement="top" title=""
+                                                                             data-original-title="Edit"><i
+                                    class="glyph-icon icon-edit"></i></a> <a href="#"
+                                                                             class="btn btn-sm hover-red tooltip-button"
+                                                                             data-placement="top" title=""
+                                                                             data-original-title="Remove"><i
+                                    class="glyph-icon icon-remove"></i>
+                                <div class="ripple-wrapper"></div>
+                            </a></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left size-sm">
+                                <div class="badge mrg10L badge-small mrg5R bg-orange"></div>
+                                Returning visitors
+                            </td>
+                            <td class="text-right"><a href="#" class="btn btn-sm hover-yellow tooltip-button"
+                                                      data-placement="top" title="" data-original-title="Flag"><i
+                                    class="glyph-icon icon-flag"></i></a> <a href="#"
+                                                                             class="btn btn-sm hover-blue-alt tooltip-button"
+                                                                             data-placement="top" title=""
+                                                                             data-original-title="Edit"><i
+                                    class="glyph-icon icon-edit"></i></a> <a href="#"
+                                                                             class="btn btn-sm hover-red tooltip-button"
+                                                                             data-placement="top" title=""
+                                                                             data-original-title="Remove"><i
+                                    class="glyph-icon icon-remove"></i>
+                                <div class="ripple-wrapper"></div>
+                            </a></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left size-sm">
+                                <div class="badge mrg10L badge-small mrg5R bg-gray"></div>
+                                Page views
+                            </td>
+                            <td class="text-right"><a href="#" class="btn btn-sm hover-yellow tooltip-button"
+                                                      data-placement="top" title="" data-original-title="Flag"><i
+                                    class="glyph-icon icon-flag"></i></a> <a href="#"
+                                                                             class="btn btn-sm hover-blue-alt tooltip-button"
+                                                                             data-placement="top" title=""
+                                                                             data-original-title="Edit"><i
+                                    class="glyph-icon icon-edit"></i></a> <a href="#"
+                                                                             class="btn btn-sm hover-red tooltip-button"
+                                                                             data-placement="top" title=""
+                                                                             data-original-title="Remove"><i
+                                    class="glyph-icon icon-remove"></i>
+                                <div class="ripple-wrapper"></div>
+                            </a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel-layout">
+                        <div class="panel-box">
+                            <div class="panel-content bg-facebook"><i class="glyph-icon font-size-35 icon-facebook"></i>
+                            </div>
+                            <div class="panel-content pad15A bg-white">
+                                <div class="center-vertical">
+                                    <ul class="center-content list-group list-group-separator row mrg0A">
+                                        <li class="col-md-6"><b>1,456</b>
+                                            <p class="font-gray">Friends</p></li>
+                                        <li class="col-md-6"><b>593</b>
+                                            <p class="font-gray">Likes</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel-layout">
+                        <div class="panel-box">
+                            <div class="panel-content bg-twitter"><i class="glyph-icon font-size-35 icon-twitter"></i>
+                            </div>
+                            <div class="panel-content pad15A bg-white">
+                                <div class="center-vertical">
+                                    <ul class="center-content list-group list-group-separator row mrg0A">
+                                        <li class="col-md-6"><b>356</b>
+                                            <p class="font-gray">Followers</p></li>
+                                        <li class="col-md-6"><b>981</b>
+                                            <p class="font-gray">Tweets</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-body"><h3 class="title-hero">Users activity</h3>
+                    <div class="example-box-wrapper">
+                        <div class="timeline-box timeline-box-left">
+                            <div class="tl-row">
+                                <div class="tl-item float-right">
+                                    <div class="tl-icon bg-red"><i class="glyph-icon icon-toggle-on"></i></div>
+                                    <div class="popover right">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <div class="tl-label bs-label label-info">Appointment</div>
+                                            <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Donec odio.</p>
+                                            <div class="tl-time"><i class="glyph-icon icon-clock-o"></i> a few seconds
+                                                ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-row">
+                                <div class="tl-item float-right">
+                                    <div class="tl-icon bg-primary"><i class="glyph-icon icon-wifi"></i></div>
+                                    <div class="popover right">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <div class="tl-label bs-label bg-yellow">Teleconference</div>
+                                            <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Donec odio.</p>
+                                            <div class="tl-time"><i class="glyph-icon icon-clock-o"></i> a few seconds
+                                                ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tl-row">
+                                <div class="tl-item float-right">
+                                    <div class="tl-icon bg-black"><i class="glyph-icon icon-headphones"></i></div>
+                                    <div class="popover right">
+                                        <div class="arrow"></div>
+                                        <div class="popover-content">
+                                            <div class="tl-label bs-label label-danger">Meeting</div>
+                                            <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                elit. Donec odio.</p>
+                                            <div class="tl-time"><i class="glyph-icon icon-clock-o"></i> a few seconds
+                                                ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

@@ -1,0 +1,28 @@
+<template name="Test">
+    <div id="new-Lamp-form">
+        {{> quickForm collection="Lamp" id="insertNewLamp" type="insert" class="mui-textfield mui-textfield--float-label"
+        buttonClasses="mui-btn mui-btn--primary mui-btn--raised"
+        buttonContent="提交"}}
+
+        {{#autoForm collection="Lamp" id="insertBookForm" type="insert"}}
+            <fieldset>
+                <legend>Add a Book</legend>
+                {{> afQuickField name='owner'}}
+                {{> afQuickField name='lamptype'}}
+                {{> afQuickField name='locationtype'}}
+                {{> afQuickField name='important' template="bootstrap3-inline" label-class="sr-only" afFieldInput-placeholder="schemaLabel"}}
+                <div class="form-group{{#if afFieldIsInvalid name='cost'}} has-error{{/if}}">
+                    <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        {{> afFieldInput name='cost'}}
+                        <span class="input-group-addon">/each</span>
+                    </div>
+                    {{#if afFieldIsInvalid name='cost'}}
+                        <span class="help-block">{{afFieldMessage name='cost'}}</span>
+                    {{/if}}
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Insert</button>
+        {{/autoForm}}
+    </div>
+</template>

@@ -1,0 +1,60 @@
+<template name="NewLamp">
+
+    <link scr="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+
+
+    <div id="create-new-lamp">
+
+        <form id="create-new-lamp-form">
+            <legend>注册路灯</legend>
+
+            <div class="mui-textfield mui-textfield--float-label">
+                <input type="text" id="owner" required/>
+                <label class="signup-form-label" for="owner">拥有者</label>
+            </div>
+
+            <div class="mui-select">
+                <label>路灯类型</label>
+                <select id="lamp-type">
+                    <option>HID</option>
+                    <option>LED</option>
+                </select>
+            </div>
+
+            <div class="mui-radio">
+                <label>
+                    <input type="radio"
+                           id="important-Radios"
+                           name="important-Radios"
+                           value=True>
+                    重要
+                </label>
+            </div>
+
+            <div class="mui-radio">
+                <label>
+                    <input type="radio"
+                           id="important-Radios"
+                           name="important-Radios"
+                           value=False>
+                    非重要
+                </label>
+            </div>
+
+            <div class="mui-select">
+                <label>安装地点类型</label>
+                <select id="location-type">
+                    <option>交通干道</option>
+                    <option>辅道</option>
+                    <option>广场</option>
+                    <option>园区</option>
+                </select>
+            </div>
+
+            <button type="submit" class="mui-btn mui-btn--raised">提交</button>
+
+        </form>
+
+
+    </div>
+</template>
