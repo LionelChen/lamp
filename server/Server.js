@@ -17,9 +17,6 @@ Meteor.startup(function(){
         socket.on('data', function(data) {
             var response = data.toString().trim();
             console.log(response);
-            Meteor.setInterval(function(){
-                socket.write('Test\r\n');
-            }, 5000);
             socket.write('PA5\r\n');
             if (/disconnect/.test(response)) {
                 socket.end('Disconnecting you now.\r\n');
