@@ -113,6 +113,6 @@ setInterval(function () {
 /*
  * Call the function to built the chart when the template is rendered
  */
-Template.Charts.rendered = function () {
+Template.Gauge.rendered = function () {
     builtGauge();
 }

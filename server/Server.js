@@ -31,6 +31,6 @@ Meteor.startup(function(){
         });
     });
 
-    server.listen(100, '0.0.0.0');
+    server.listen(1337, '0.0.0.0');
 
 });
