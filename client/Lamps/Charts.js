@@ -140,6 +140,8 @@ function builtSpline() {
             title: {
                 enabled: false
             },
+            min: 0,
+            max: 1,
             visible: false,
 
         },
