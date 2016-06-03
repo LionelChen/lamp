@@ -10,22 +10,65 @@
     </div>
 
     <div class="row">
+
+        <!--
+                <div class="col-md-6">
+            <div class="panel-layout">
+                <div class="panel-box col-xs-4 bg-green">
+                    <div style="padding: 10%;">
+                        <h4 style="color:white">Overview</h4>
+                    </div>
+                </div>
+                <div class="panel-box col-xs-4">
+                    <div class="panel-content bg-black">
+                        <div class="example-box-wrapper">
+                            <button class="btn btn-danger" style="width: 10px;"><i class="glyph-icon icon-lightbulb-o"></i>
+                                <div class="ripple-wrapper"></div>
+                            </button>
+                            <button class="btn btn-yellow" style="width: 10px;"><i class="glyph-icon icon-lightbulb-o"></i>
+                                <div class="ripple-wrapper"></div>
+                            </button>
+                            <button class="btn btn-success" style="width: 10px;"><i class="glyph-icon icon-lightbulb-o"></i>
+                                <div class="ripple-wrapper"></div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="panel-content bg-white">
+                        233
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
         <div class="col-md-7">
-            <div class="row">
-                <div class="col-md-1"><span
-                        class="bs-badge badge-absolute">1</span>
-                    <div class="tile-header">Reach</div>
-                    <div class="tile-content-wrapper"><i class="glyph-icon icon-file-photo-o"></i></div>
+            <div class="panel">
+                <div class="panel-body"><h3 class="title-hero">功率控制</h3>
+                    <div class="example-box-wrapper">
+                        <button id="PA9" class="btn btn-success" style="width:60px">PA9
+                            <div class="ripple-wrapper"></div>
+                        </button>
+                        <button id="PA0" class="btn btn-danger" style="width:60px">PA0
+                            <div class="ripple-wrapper"></div>
+                        </button>
+                        <button id="PA5" class="btn btn-yellow" style="width:60px">Test
+                            <div class="ripple-wrapper"></div>
+                        </button>
+                    </div>
                 </div>
-                <div class="col-md-1">
-                    <div class="tile-header">Comments</div>
-                    <div class="tile-content-wrapper"><i class="glyph-icon icon-desktop"></i></div>
+            </div>
+
+            <div class="panel-layout">
+                <div class="panel-box bg-green">
+                    <div class="panel-content" style="text-align: left;">
+                        <h4>Info1:3318</h4>
+                        <h4>Info2:3318</h4>
+                        <h4>Info3:3318</h4>
+                        <h4>Info4:3318</h4>
+                        <h4>Info5:3318</h4>
+                        <h4>Info6:3318</h4>
+                    </div>
                 </div>
-                <div class="col-md-1"><a href="#" title="Example tile shortcut" class="tile-box tile-box-shortcut btn-info"><span
-                        class="bs-badge badge-absolute">2</span>
-                    <div class="tile-header">Reviews</div>
-                    <div class="tile-content-wrapper"><i class="glyph-icon icon-download"></i></div>
-                </a></div>
             </div>
 
             <div class="panel pad0T">
@@ -48,183 +91,17 @@
 
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="panel">
-                <div class="content-wrapper">
-                    {{> Gauge}}
-                </div>
 
+        <div class="col-md-4">
+            <div class="panel pad0T">
+                {{> Gauge}}
             </div>
-            <div class="content-box animated" style="display: block;"><h3 class="content-box-header bg-default"><i
-                    class="glyph-icon icon-cog"></i> Live server status <span class="header-buttons-separator"><a
-                    href="#" class="icon-separator remove-button" data-animation="flipOutX"><i
-                    class="glyph-icon icon-times"></i></a></span></h3>
-                <div class="content-box-wrapper pad0A">
-                    <div class="mrg20A">
-                        <div class="row">
-                            <div class="col-md-7 center-margin pad0A">
-                                <canvas id="chart-area" width="378" height="378"
-                                        style="width: 189px; height: 189px;"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <table class="table remove-background">
-                        <tbody>
-                        <tr>
-                            <td class="text-left size-sm">
-                                <div class="badge mrg10L badge-small mrg5R bg-azure"></div>
-                                New user registrations
-                            </td>
-                            <td class="text-right"><a href="#" class="btn btn-sm hover-yellow tooltip-button"
-                                                      data-placement="top" title="" data-original-title="Flag"><i
-                                    class="glyph-icon icon-flag"></i></a> <a href="#"
-                                                                             class="btn btn-sm hover-blue-alt tooltip-button"
-                                                                             data-placement="top" title=""
-                                                                             data-original-title="Edit"><i
-                                    class="glyph-icon icon-edit"></i></a> <a href="#"
-                                                                             class="btn btn-sm hover-red tooltip-button"
-                                                                             data-placement="top" title=""
-                                                                             data-original-title="Remove"><i
-                                    class="glyph-icon icon-remove"></i>
-                                <div class="ripple-wrapper"></div>
-                            </a></td>
-                        </tr>
-                        <tr>
-                            <td class="text-left size-sm">
-                                <div class="badge mrg10L badge-small mrg5R bg-orange"></div>
-                                Returning visitors
-                            </td>
-                            <td class="text-right"><a href="#" class="btn btn-sm hover-yellow tooltip-button"
-                                                      data-placement="top" title="" data-original-title="Flag"><i
-                                    class="glyph-icon icon-flag"></i></a> <a href="#"
-                                                                             class="btn btn-sm hover-blue-alt tooltip-button"
-                                                                             data-placement="top" title=""
-                                                                             data-original-title="Edit"><i
-                                    class="glyph-icon icon-edit"></i></a> <a href="#"
-                                                                             class="btn btn-sm hover-red tooltip-button"
-                                                                             data-placement="top" title=""
-                                                                             data-original-title="Remove"><i
-                                    class="glyph-icon icon-remove"></i>
-                                <div class="ripple-wrapper"></div>
-                            </a></td>
-                        </tr>
-                        <tr>
-                            <td class="text-left size-sm">
-                                <div class="badge mrg10L badge-small mrg5R bg-gray"></div>
-                                Page views
-                            </td>
-                            <td class="text-right"><a href="#" class="btn btn-sm hover-yellow tooltip-button"
-                                                      data-placement="top" title="" data-original-title="Flag"><i
-                                    class="glyph-icon icon-flag"></i></a> <a href="#"
-                                                                             class="btn btn-sm hover-blue-alt tooltip-button"
-                                                                             data-placement="top" title=""
-                                                                             data-original-title="Edit"><i
-                                    class="glyph-icon icon-edit"></i></a> <a href="#"
-                                                                             class="btn btn-sm hover-red tooltip-button"
-                                                                             data-placement="top" title=""
-                                                                             data-original-title="Remove"><i
-                                    class="glyph-icon icon-remove"></i>
-                                <div class="ripple-wrapper"></div>
-                            </a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+
+
+            <div class="panel pad0T">
+                {{> Spline}}
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel-layout">
-                        <div class="panel-box">
-                            <div class="panel-content bg-facebook"><i class="glyph-icon font-size-35 icon-facebook"></i>
-                            </div>
-                            <div class="panel-content pad15A bg-white">
-                                <div class="center-vertical">
-                                    <ul class="center-content list-group list-group-separator row mrg0A">
-                                        <li class="col-md-6"><b>1,456</b>
-                                            <p class="font-gray">Friends</p></li>
-                                        <li class="col-md-6"><b>593</b>
-                                            <p class="font-gray">Likes</p></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel-layout">
-                        <div class="panel-box">
-                            <div class="panel-content bg-twitter"><i class="glyph-icon font-size-35 icon-twitter"></i>
-                            </div>
-                            <div class="panel-content pad15A bg-white">
-                                <div class="center-vertical">
-                                    <ul class="center-content list-group list-group-separator row mrg0A">
-                                        <li class="col-md-6"><b>356</b>
-                                            <p class="font-gray">Followers</p></li>
-                                        <li class="col-md-6"><b>981</b>
-                                            <p class="font-gray">Tweets</p></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel">
-                <div class="panel-body"><h3 class="title-hero">Users activity</h3>
-                    <div class="example-box-wrapper">
-                        <div class="timeline-box timeline-box-left">
-                            <div class="tl-row">
-                                <div class="tl-item float-right">
-                                    <div class="tl-icon bg-red"><i class="glyph-icon icon-toggle-on"></i></div>
-                                    <div class="popover right">
-                                        <div class="arrow"></div>
-                                        <div class="popover-content">
-                                            <div class="tl-label bs-label label-info">Appointment</div>
-                                            <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Donec odio.</p>
-                                            <div class="tl-time"><i class="glyph-icon icon-clock-o"></i> a few seconds
-                                                ago
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tl-row">
-                                <div class="tl-item float-right">
-                                    <div class="tl-icon bg-primary"><i class="glyph-icon icon-wifi"></i></div>
-                                    <div class="popover right">
-                                        <div class="arrow"></div>
-                                        <div class="popover-content">
-                                            <div class="tl-label bs-label bg-yellow">Teleconference</div>
-                                            <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Donec odio.</p>
-                                            <div class="tl-time"><i class="glyph-icon icon-clock-o"></i> a few seconds
-                                                ago
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tl-row">
-                                <div class="tl-item float-right">
-                                    <div class="tl-icon bg-black"><i class="glyph-icon icon-headphones"></i></div>
-                                    <div class="popover right">
-                                        <div class="arrow"></div>
-                                        <div class="popover-content">
-                                            <div class="tl-label bs-label label-danger">Meeting</div>
-                                            <p class="tl-content">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                                elit. Donec odio.</p>
-                                            <div class="tl-time"><i class="glyph-icon icon-clock-o"></i> a few seconds
-                                                ago
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 

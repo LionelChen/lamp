@@ -11,14 +11,29 @@ Meteor.methods({
 
 
 Meteor.startup(function(){
+
+
+    var Fiber = Npm.require('fibers');
+
+
     var net = require('net');
     var server = net.createServer(function(socket) {
         socket.write('Connected!\r\n');
         socket.on('data', function(data) {
             var response = data.toString().trim();
-            console.log(response);
-            socket.write('PA5\r\n');
-            socket.end();
+            console.log(response)
+            Fiber(function () {
+                if(Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus==2){
+                    socket.write("PA9\r\n");
+                }
+                if(Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus==1){
+                    socket.write("PA9\r\n");
+                }
+                if(Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus==0){
+                    socket.write("PA9\r\n");
+                }
+                socket.end();
+            }).run();
             /*
             if (/disconnect/.test(response)) {
                 socket.end('Disconnecting you now.\r\n');
