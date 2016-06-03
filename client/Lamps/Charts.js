@@ -151,19 +151,19 @@ function builtSpline() {
     });
 }
 
-function builtScatter() {
-    var data1= new Array(70);
-    for(var i=0;i<data1.length;i++)
-        data1[i] = new Array(2);
+var data1= new Array(70);
+for(var i=0;i<data1.length;i++)
+    data1[i] = new Array(2);
 
-    var data2 = new Array(70);
-    for(var i=0; i<data2.length;i++)
-        data2[i] = new Array(2);
+var data2 = new Array(70);
+for(var i=0; i<data2.length;i++)
+    data2[i] = new Array(2);
+
+function builtScatter() {
 
 
     $('#container-scatter').highcharts({
         chart: {
-            renderTo: 'FIGledStatus',
             type: 'scatter',
             plotBorderWidth: 1,
             plotBackgroundImage: null,
@@ -200,7 +200,6 @@ function builtScatter() {
                 },
                 tooltip: {
                     headerFormat: '<b>{series.name}</b><br>',
-                    pointFormat: '{point.x} cm, {point.y} kg'
                 }
             }
         },
@@ -232,8 +231,6 @@ function builtScatter() {
     });
 }
 
-
-
 setInterval(function () {
     var chart = $('#container-gauge').highcharts(),
         point,
@@ -254,9 +251,33 @@ setInterval(function () {
 
 }, 50);
 
+setInterval(function () {
+    var chart = $('#container-scatter').highcharts()
+
+    var dataSys = chart.series[0];
+    var dataLamp = chart.series[1];
+
+    for(var i=0;i<data1.length;i++){
+        data1[i][0] = i;
+        data1[i][1]=0.5+(Math.random()-0.5)/3;
+    }
+
+    for(var i=0;i<data2.length-1;i++){
+        data2[i][0]=i;
+        data2[i][1]=data2[i+1][1];
+    }
+    data2[69][0]=69;
+    data2[69][1]=0.5+(Math.random()-0.5)/10;
+
+    dataSys.update(data1, false);
+    dataLamp.update(data2,false);
+    chart.redraw();
+
+}, 500);
+
 Template.Gauge.rendered = function () {
     builtGauge();
     builtSpline();
-    //builtScatter();
+    builtScatter();
 
 };

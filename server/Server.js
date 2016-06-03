@@ -27,10 +27,10 @@ Meteor.startup(function(){
                     socket.write("PA9\r\n");
                 }
                 if(Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus==1){
-                    socket.write("PA9\r\n");
+                    socket.write("PA5\r\n");
                 }
                 if(Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus==0){
-                    socket.write("PA9\r\n");
+                    socket.write("PA0\r\n");
                 }
                 socket.end();
             }).run();

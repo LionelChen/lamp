@@ -1,46 +1,9 @@
 <template name="Dashboard">
-    <style>
-        body{
-            background-color:rgb(244,245,247)
-        }
-    </style>
     <div id="page-title"><h2>Dashboard</h2>
-        <p>The most complete user interface framework that can be used to create stunning admin dashboards and
-            presentation websites.</p>
     </div>
 
     <div class="row">
 
-        <!--
-                <div class="col-md-6">
-            <div class="panel-layout">
-                <div class="panel-box col-xs-4 bg-green">
-                    <div style="padding: 10%;">
-                        <h4 style="color:white">Overview</h4>
-                    </div>
-                </div>
-                <div class="panel-box col-xs-4">
-                    <div class="panel-content bg-black">
-                        <div class="example-box-wrapper">
-                            <button class="btn btn-danger" style="width: 10px;"><i class="glyph-icon icon-lightbulb-o"></i>
-                                <div class="ripple-wrapper"></div>
-                            </button>
-                            <button class="btn btn-yellow" style="width: 10px;"><i class="glyph-icon icon-lightbulb-o"></i>
-                                <div class="ripple-wrapper"></div>
-                            </button>
-                            <button class="btn btn-success" style="width: 10px;"><i class="glyph-icon icon-lightbulb-o"></i>
-                                <div class="ripple-wrapper"></div>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="panel-content bg-white">
-                        233
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
         <div class="col-md-7">
             <div class="panel">
                 <div class="panel-body"><h3 class="title-hero">功率控制</h3>
@@ -102,6 +65,9 @@
                 {{> Spline}}
             </div>
 
+            <div class="panel pad0T">
+                {{> Scatter}}
+            </div>
         </div>
     </div>
 
