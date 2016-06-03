@@ -85,6 +85,7 @@ function builtGauge() {
 
 function builtSpline() {
 
+
     $('#container-spline').highcharts({
         chart: {
             type: 'areaspline',
@@ -144,7 +145,7 @@ function builtSpline() {
         },
 
         series: [{
-            data: [0.5,0.5,0.5,0.5,0.5,0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.5,0.9,0.9,0.75],
+            data: [0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75],
             pointStart: false,
             pointInterval: 3600 * 1000
         }]
@@ -237,19 +238,60 @@ setInterval(function () {
         newVal,
         inc;
 
+    var tempStatus = Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus;
     if (chart) {
         point = chart.series[0].points[0];
-        inc = (Math.random() - 0.5) / 50 ;
+        var centerValue;
+        if(tempStatus==2){
+            centerValue = 0.75;
+            point.update(centerValue);
+        }
+        if(tempStatus==1){
+            centerValue = 0.5;
+            point.update(centerValue);
+        }
+        if(tempStatus==0){
+            centerValue = 0.25;
+            point.update(centerValue);
+        }
+        point = chart.series[0].points[0];
+        inc = (Math.random() - 0.5) / 500 ;
         newVal = point.y + inc;
 
-        if (newVal < 0.475 || newVal > 0.525) {
+        if (newVal < (centerValue-0.025) || newVal > (centerValue+0.025)) {
             newVal = point.y - inc;
         }
 
-        point.update(newVal);
     }
 
 }, 50);
+
+setInterval(function () {
+    var chart = $('#container-spline').highcharts();
+
+    var spline_data = chart.series[0];
+    var tempStatus = Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus;
+    var spline_data0 = [0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25];
+    var spline_data1 = [0.5,0.5,0.5,0.5,0.5,0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.5,0.9,0.9,0.75];
+    var spline_data2 = [0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75];
+    if(tempStatus == 2){
+        for(i=0;i<24;i++){
+            chart.series[0].data[i].update(spline_data2[i],false)
+        }
+    }else if(tempStatus == 1){
+        for(i=0;i<24;i++){
+            chart.series[0].data[i].update(spline_data1[i],false)
+        }
+    }else if(tempStatus == 0){
+        for(i=0;i<24;i++){
+            chart.series[0].data[i].update(spline_data0[i],false)
+        }
+    }
+    chart.redraw();
+
+
+
+}, 500);
 
 setInterval(function () {
     var chart = $('#container-scatter').highcharts()
