@@ -23,13 +23,13 @@ Meteor.startup(function(){
             var response = data.toString().trim();
             console.log(response)
             Fiber(function () {
-                if(Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus==2){
+                if(Lamp.findOne().tempStatus==2){
                     socket.write("PA9\r\n");
                 }
-                if(Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus==1){
+                if(Lamp.findOne().tempStatus==1){
                     socket.write("PA5\r\n");
                 }
-                if(Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus==0){
+                if(Lamp.findOne().tempStatus==0){
                     socket.write("PA0\r\n");
                 }
                 socket.end();

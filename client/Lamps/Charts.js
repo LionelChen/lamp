@@ -238,7 +238,7 @@ setInterval(function () {
         newVal,
         inc;
 
-    var tempStatus = Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus;
+    var tempStatus = Lamp.findOne().tempStatus;
     if (chart) {
         point = chart.series[0].points[0];
         var centerValue;
@@ -270,7 +270,7 @@ setInterval(function () {
     var chart = $('#container-spline').highcharts();
 
     var spline_data = chart.series[0];
-    var tempStatus = Lamp.findOne({_id:"hpnC6neKCbs2QtuFq"}).tempStatus;
+    var tempStatus = Lamp.findOne().tempStatus;
     var spline_data0 = [0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25];
     var spline_data1 = [0.5,0.5,0.5,0.5,0.5,0.5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.5,0.9,0.9,0.75];
     var spline_data2 = [0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75,0.75];
